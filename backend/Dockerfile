@@ -22,8 +22,7 @@ RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --locked --quiet || \
     (sleep 10 && uv sync --locked --quiet) || \
     (sleep 20 && uv sync --locked --quiet) || \
-    (sleep 30 && uv sync --locked --quiet) || \
-    uv sync --locked --quiet
+    (sleep 30 && uv sync --locked --quiet)
 
 # Copy application code
 COPY . .
